@@ -1,0 +1,160 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix : <http://purl.org/net/nary-relation#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://purl.org/net/nary-relation>
+    a owl:Ontology .
+
+:D
+    a owl:Class ;
+    owl:equivalentClass [
+        a owl:Restriction ;
+        owl:onProperty :has_NR ;
+        owl:someValuesFrom :NR
+    ] .
+
+:NR
+    a owl:Class ;
+    owl:equivalentClass [
+        a owl:Restriction ;
+        owl:hasSelf true ;
+        owl:onProperty :is_NR
+    ], [
+        a owl:Class ;
+        owl:intersectionOf ([
+                a owl:Restriction ;
+                owl:onProperty :d ;
+                owl:someValuesFrom :D
+            ]
+            [
+                a owl:Restriction ;
+                owl:onProperty :r1 ;
+                owl:someValuesFrom :R1
+            ]
+            [
+                a owl:Restriction ;
+                owl:onProperty :r2 ;
+                owl:someValuesFrom :R2
+            ]
+            [
+                a owl:Restriction ;
+                owl:onProperty :r3 ;
+                owl:someValuesFrom :R3
+            ]
+            [
+                a owl:Restriction ;
+                owl:onProperty :rn ;
+                owl:someValuesFrom :RN
+            ]
+        )
+    ] .
+
+:R1
+    a owl:Class .
+
+:R2
+    a owl:Class .
+
+:R3
+    a owl:Class .
+
+:RN
+    a owl:Class .
+
+:d
+    a owl:ObjectProperty ;
+    rdfs:subPropertyOf owl:topObjectProperty ;
+    owl:inverseOf :has_NR .
+
+:ex_D
+    a :D, owl:NamedIndividual .
+
+:ex_NR
+    :d :ex_D ;
+    :r1 :ex_R1 ;
+    :r2 :ex_R2 ;
+    :r3 :ex_R3 ;
+    :rn :ex_RN ;
+    a :NR, owl:NamedIndividual .
+
+:ex_R1
+    a :R1, owl:NamedIndividual .
+
+:ex_R2
+    a :R2, owl:NamedIndividual .
+
+:ex_R3
+    a :R3, owl:NamedIndividual .
+
+:ex_RN
+    a :RN, owl:NamedIndividual .
+
+:has_NR
+    a owl:ObjectProperty ;
+    rdfs:subPropertyOf owl:topObjectProperty .
+
+:has_NR_r1
+    a owl:ObjectProperty ;
+    rdfs:subPropertyOf owl:topObjectProperty ;
+    owl:propertyChainAxiom ([
+            owl:inverseOf :d
+        ]
+        :is_NR
+        :r1
+    ) .
+
+:has_NR_r2
+    a owl:ObjectProperty ;
+    rdfs:subPropertyOf owl:topObjectProperty ;
+    owl:propertyChainAxiom ([
+            owl:inverseOf :d
+        ]
+        :is_NR
+        :r2
+    ) .
+
+:has_NR_r3
+    a owl:ObjectProperty ;
+    rdfs:subPropertyOf owl:topObjectProperty ;
+    owl:propertyChainAxiom ([
+            owl:inverseOf :d
+        ]
+        :is_NR
+        :r3
+    ) .
+
+:has_NR_rn
+    a owl:ObjectProperty ;
+    rdfs:subPropertyOf owl:topObjectProperty ;
+    owl:propertyChainAxiom ([
+            owl:inverseOf :d
+        ]
+        :is_NR
+        :rn
+    ) .
+
+:is_NR
+    a owl:ObjectProperty ;
+    rdfs:subPropertyOf owl:topObjectProperty .
+
+:r1
+    a owl:ObjectProperty ;
+    rdfs:subPropertyOf owl:topObjectProperty .
+
+:r2
+    a owl:ObjectProperty ;
+    rdfs:subPropertyOf owl:topObjectProperty .
+
+:r3
+    a owl:ObjectProperty ;
+    rdfs:subPropertyOf owl:topObjectProperty .
+
+:rn
+    a owl:ObjectProperty ;
+    rdfs:subPropertyOf owl:topObjectProperty .
+
+owl:topObjectProperty
+    a owl:ObjectProperty .
+

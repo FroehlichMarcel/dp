@@ -1,0 +1,192 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix : <http://purl.org/net/roles#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix social-reality: <http://purl.org/net/social-reality#> .
+
+<http://purl.org/net/roles>
+    a owl:Ontology ;
+    owl:imports <http://purl.org/net/social-reality> .
+
+:Ac
+    a owl:Class ;
+    rdfs:subClassOf owl:Thing ;
+    owl:equivalentClass [
+        a owl:Restriction ;
+        owl:hasSelf true ;
+        owl:onProperty :is_Ac
+    ] .
+
+:Ag
+    a owl:Class ;
+    rdfs:subClassOf owl:Thing ;
+    owl:equivalentClass [
+        a owl:Restriction ;
+        owl:hasSelf true ;
+        owl:onProperty :is_Ag
+    ] .
+
+:Ar
+    a owl:Class ;
+    owl:equivalentClass [
+        a owl:Restriction ;
+        owl:hasSelf true ;
+        owl:onProperty :is_Ar
+    ] .
+
+:F
+    a owl:Class ;
+    rdfs:subClassOf social-reality:OR ;
+    owl:equivalentClass [
+        a owl:Class ;
+        owl:intersectionOf ([
+                a owl:Restriction ;
+                owl:onProperty social-reality:context ;
+                owl:someValuesFrom :Ac
+            ]
+            [
+                a owl:Restriction ;
+                owl:onProperty [
+                    owl:inverseOf :plays
+                ] ;
+                owl:someValuesFrom :Ar
+            ]
+        )
+    ], [
+        a owl:Restriction ;
+        owl:hasSelf true ;
+        owl:onProperty :is_F
+    ] .
+
+:R
+    a owl:Class ;
+    rdfs:subClassOf social-reality:OR ;
+    owl:equivalentClass [
+        a owl:Restriction ;
+        owl:onProperty [
+            owl:inverseOf :plays
+        ] ;
+        owl:someValuesFrom social-reality:BF
+    ], [
+        a owl:Restriction ;
+        owl:hasSelf true ;
+        owl:onProperty :is_R
+    ] .
+
+:TR
+    a owl:Class ;
+    rdfs:subClassOf social-reality:OR ;
+    owl:equivalentClass [
+        a owl:Restriction ;
+        owl:hasSelf true ;
+        owl:onProperty :is_TR
+    ], [
+        a owl:Class ;
+        owl:intersectionOf ([
+                a owl:Restriction ;
+                owl:onProperty social-reality:context ;
+                owl:someValuesFrom :Ac
+            ]
+            [
+                a owl:Restriction ;
+                owl:onProperty [
+                    owl:inverseOf :plays
+                ] ;
+                owl:someValuesFrom :Ag
+            ]
+        )
+    ] .
+
+:has_F
+    a owl:ObjectProperty ;
+    rdfs:subPropertyOf owl:topObjectProperty ;
+    owl:propertyChainAxiom (:is_Ac
+        [
+            owl:inverseOf social-reality:context
+        ]
+        :is_F
+        [
+            owl:inverseOf :plays
+        ]
+        :is_Ar
+    ) .
+
+:has_R
+    a owl:ObjectProperty ;
+    rdfs:subPropertyOf owl:topObjectProperty ;
+    owl:propertyChainAxiom ([
+            owl:inverseOf social-reality:context
+        ]
+        :is_R
+        [
+            owl:inverseOf :plays
+        ]
+    ) .
+
+:has_TR
+    a owl:ObjectProperty ;
+    rdfs:subPropertyOf owl:topObjectProperty ;
+    owl:propertyChainAxiom (:is_Ac
+        [
+            owl:inverseOf social-reality:context
+        ]
+        :is_TR
+        [
+            owl:inverseOf :plays
+        ]
+        :is_Ag
+    ) .
+
+:is_Ac
+    a owl:ObjectProperty ;
+    rdfs:subPropertyOf owl:topObjectProperty .
+
+:is_Ag
+    a owl:ObjectProperty ;
+    rdfs:subPropertyOf owl:topObjectProperty .
+
+:is_Ar
+    a owl:ObjectProperty ;
+    rdfs:subPropertyOf owl:topObjectProperty .
+
+:is_F
+    a owl:ObjectProperty ;
+    rdfs:subPropertyOf owl:topObjectProperty .
+
+:is_R
+    a owl:ObjectProperty ;
+    rdfs:subPropertyOf owl:topObjectProperty .
+
+:is_TR
+    a owl:ObjectProperty ;
+    rdfs:subPropertyOf owl:topObjectProperty .
+
+:plays
+    a owl:ObjectProperty ;
+    rdfs:subPropertyOf social-reality:counts-as .
+
+social-reality:BF
+    a owl:Class .
+
+social-reality:OR
+    a owl:Class .
+
+social-reality:context
+    a owl:ObjectProperty .
+
+social-reality:counts-as
+    a owl:ObjectProperty .
+
+social-reality:has_OR
+    a owl:ObjectProperty .
+
+social-reality:is_OR
+    a owl:ObjectProperty .
+
+owl:Thing
+    a owl:Class .
+
+owl:topObjectProperty
+    a owl:ObjectProperty .
+

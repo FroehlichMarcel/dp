@@ -1,0 +1,84 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix : <http://purl.org/net/social-reality#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://purl.org/net/social-reality>
+    a owl:Ontology .
+
+:BF
+    a owl:Class .
+
+:C
+    a owl:Class .
+
+:OR
+    a owl:Class ;
+    rdfs:subClassOf [
+        a owl:Class ;
+        owl:intersectionOf ([
+                a owl:Restriction ;
+                owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty :context
+            ]
+            [
+                a owl:Restriction ;
+                owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty [
+                    owl:inverseOf :counts-as
+                ]
+            ]
+        )
+    ] ;
+    owl:equivalentClass [
+        a owl:Restriction ;
+        owl:hasSelf true ;
+        owl:onProperty :is_OR
+    ], [
+        a owl:Class ;
+        owl:intersectionOf ([
+                a owl:Restriction ;
+                owl:onProperty :context ;
+                owl:someValuesFrom :C
+            ]
+            [
+                a owl:Restriction ;
+                owl:onProperty [
+                    owl:inverseOf :counts-as
+                ] ;
+                owl:someValuesFrom :BF
+            ]
+        )
+    ] .
+
+:context
+    a owl:ObjectProperty ;
+    rdfs:subPropertyOf owl:topObjectProperty .
+
+:counts-as
+    a owl:ObjectProperty ;
+    rdfs:subPropertyOf owl:topObjectProperty .
+
+:has_OR
+    a owl:ObjectProperty ;
+    rdfs:subPropertyOf owl:topObjectProperty ;
+    owl:propertyChainAxiom ([
+            owl:inverseOf :context
+        ]
+        :is_OR
+        [
+            owl:inverseOf :counts-as
+        ]
+    ) .
+
+:is_OR
+    a owl:ObjectProperty ;
+    rdfs:subPropertyOf owl:topObjectProperty .
+
+owl:Thing
+    a owl:Class .
+
+owl:topObjectProperty
+    a owl:ObjectProperty .
+
