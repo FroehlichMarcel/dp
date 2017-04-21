@@ -2,7 +2,7 @@
 
 Ontology Design Patterns
 
-Elegant solution for n-ary relations and related design problems making use of advanced OWL 2 features.
+Elegant solution from Rinke Hoekstra for n-ary relations and related design problems making use of advanced OWL 2 features.
 
 See 
 http://ontologydesignpatterns.org/wiki/Submissions:Social_Reality_%28OWL_2%29
