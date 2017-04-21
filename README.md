@@ -12,4 +12,4 @@ http://ontologydesignpatterns.org/wiki/Submissions:N-Ary_Relation_Pattern_%28OWL
 and
 http://ceur-ws.org/Vol-614/owled2010_submission_29.pdf
 
-The pattern to model social reality (Searle) is directly mapping to Sowa's notion of Indepenent-Relative-Mediating.
+The pattern to model social reality (Searle) can be directly mapped to Sowa's notion of Indepenent-Relative-Mediating.
