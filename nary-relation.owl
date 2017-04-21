@@ -1,0 +1,299 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://purl.org/net/nary-relation#"
+     xml:base="http://purl.org/net/nary-relation"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://purl.org/net/nary-relation"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/net/nary-relation#d -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/net/nary-relation#d">
+        <owl:inverseOf rdf:resource="http://purl.org/net/nary-relation#has_NR"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/net/nary-relation#has_NR -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/net/nary-relation#has_NR">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/net/nary-relation#has_NR_r1 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/net/nary-relation#has_NR_r1">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://purl.org/net/nary-relation#d"/>
+            </rdf:Description>
+            <rdf:Description rdf:about="http://purl.org/net/nary-relation#is_NR"/>
+            <rdf:Description rdf:about="http://purl.org/net/nary-relation#r1"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/net/nary-relation#has_NR_r2 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/net/nary-relation#has_NR_r2">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://purl.org/net/nary-relation#d"/>
+            </rdf:Description>
+            <rdf:Description rdf:about="http://purl.org/net/nary-relation#is_NR"/>
+            <rdf:Description rdf:about="http://purl.org/net/nary-relation#r2"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/net/nary-relation#has_NR_r3 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/net/nary-relation#has_NR_r3">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://purl.org/net/nary-relation#d"/>
+            </rdf:Description>
+            <rdf:Description rdf:about="http://purl.org/net/nary-relation#is_NR"/>
+            <rdf:Description rdf:about="http://purl.org/net/nary-relation#r3"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/net/nary-relation#has_NR_rn -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/net/nary-relation#has_NR_rn">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://purl.org/net/nary-relation#d"/>
+            </rdf:Description>
+            <rdf:Description rdf:about="http://purl.org/net/nary-relation#is_NR"/>
+            <rdf:Description rdf:about="http://purl.org/net/nary-relation#rn"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/net/nary-relation#is_NR -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/net/nary-relation#is_NR">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/net/nary-relation#r1 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/net/nary-relation#r1">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/net/nary-relation#r2 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/net/nary-relation#r2">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/net/nary-relation#r3 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/net/nary-relation#r3">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/net/nary-relation#rn -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/net/nary-relation#rn">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#topObjectProperty -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/net/nary-relation#D -->
+
+    <owl:Class rdf:about="http://purl.org/net/nary-relation#D">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/net/nary-relation#has_NR"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/net/nary-relation#NR"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/net/nary-relation#NR -->
+
+    <owl:Class rdf:about="http://purl.org/net/nary-relation#NR">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/net/nary-relation#is_NR"/>
+                <owl:hasSelf rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasSelf>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.org/net/nary-relation#d"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.org/net/nary-relation#D"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.org/net/nary-relation#r1"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.org/net/nary-relation#R1"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.org/net/nary-relation#r2"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.org/net/nary-relation#R2"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.org/net/nary-relation#r3"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.org/net/nary-relation#R3"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.org/net/nary-relation#rn"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.org/net/nary-relation#RN"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/net/nary-relation#R1 -->
+
+    <owl:Class rdf:about="http://purl.org/net/nary-relation#R1"/>
+    
+
+
+    <!-- http://purl.org/net/nary-relation#R2 -->
+
+    <owl:Class rdf:about="http://purl.org/net/nary-relation#R2"/>
+    
+
+
+    <!-- http://purl.org/net/nary-relation#R3 -->
+
+    <owl:Class rdf:about="http://purl.org/net/nary-relation#R3"/>
+    
+
+
+    <!-- http://purl.org/net/nary-relation#RN -->
+
+    <owl:Class rdf:about="http://purl.org/net/nary-relation#RN"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/net/nary-relation#ex_D -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/net/nary-relation#ex_D">
+        <rdf:type rdf:resource="http://purl.org/net/nary-relation#D"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/net/nary-relation#ex_NR -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/net/nary-relation#ex_NR">
+        <rdf:type rdf:resource="http://purl.org/net/nary-relation#NR"/>
+        <d rdf:resource="http://purl.org/net/nary-relation#ex_D"/>
+        <r1 rdf:resource="http://purl.org/net/nary-relation#ex_R1"/>
+        <r2 rdf:resource="http://purl.org/net/nary-relation#ex_R2"/>
+        <r3 rdf:resource="http://purl.org/net/nary-relation#ex_R3"/>
+        <rn rdf:resource="http://purl.org/net/nary-relation#ex_RN"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/net/nary-relation#ex_R1 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/net/nary-relation#ex_R1">
+        <rdf:type rdf:resource="http://purl.org/net/nary-relation#R1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/net/nary-relation#ex_R2 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/net/nary-relation#ex_R2">
+        <rdf:type rdf:resource="http://purl.org/net/nary-relation#R2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/net/nary-relation#ex_R3 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/net/nary-relation#ex_R3">
+        <rdf:type rdf:resource="http://purl.org/net/nary-relation#R3"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/net/nary-relation#ex_RN -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/net/nary-relation#ex_RN">
+        <rdf:type rdf:resource="http://purl.org/net/nary-relation#RN"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.0.0.1451) http://owlapi.sourceforge.net -->
+
